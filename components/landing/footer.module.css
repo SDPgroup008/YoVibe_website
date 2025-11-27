@@ -1,0 +1,94 @@
+/* Dark footer with neon top border */
+.footer {
+  border-top: 1px solid rgba(138, 43, 226, 0.2);
+  background: linear-gradient(to bottom, rgba(138, 43, 226, 0.08), transparent);
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(138, 43, 226, 0.6), transparent);
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.section {
+}
+
+/* Neon purple and cyan gradient brand */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #8a2be2, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.2));
+}
+
+.brandDescription {
+  color: #b0b0c0;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Neon link hover effect */
+.link {
+  color: #b0b0c0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.divider {
+  border-top: 1px solid rgba(138, 43, 226, 0.15);
+  padding-top: 2rem;
+  text-align: center;
+  color: #808080;
+  font-size: 0.875rem;
+}

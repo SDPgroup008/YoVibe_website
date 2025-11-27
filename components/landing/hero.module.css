@@ -1,0 +1,286 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 5rem;
+  /* Enhanced night gradient with deep blacks and subtle neon glow */
+  background: linear-gradient(135deg, #050510 0%, #0a0a1a 30%, #050515 60%, #000000 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Added ambient glow effects for night vibe */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 200, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.container {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Neon pink and cyan gradient for logo */
+.yoVibeLogo {
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .yoVibeLogo {
+    font-size: 9.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .yoVibeLogo {
+    font-size: 10.5rem;
+  }
+}
+
+/* Vibrant neon pink */
+.yo {
+  background: linear-gradient(to right, #eb1818, #eb1818);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.4));
+}
+
+/* Cyan to purple gradient */
+.vibe {
+  background: linear-gradient(to right, #00ffff, #7f00ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.3));
+}
+
+.funnyText {
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* Neon cyan color */
+  color: #00ffff;
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-top: 0;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5));
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.6rem);
+  }
+}
+
+.funnyText::before {
+  content: "Tuliwa ?";
+  animation: wave 0.9s ease-in-out 0s infinite;
+  
+}
+
+.funnyText::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  animation: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  /* Neon purple border */
+  border: 1px solid rgba(138, 43, 226, 0.4);
+  background-color: rgba(138, 43, 226, 0.08);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.badgeDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #8a2be2;
+}
+
+.badgeText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9d4edd;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .heading {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 5.5rem;
+  }
+}
+
+/* White to purple gradient for first line */
+.gradientBlue {
+  background: linear-gradient(to right, #ffffff, #9d4edd, #7f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(157, 78, 221, 0.2));
+}
+
+/* Pink to cyan gradient for second line */
+.gradientRed {
+  background: linear-gradient(to right, #ff00ff, #ff1493, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.2));
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #b0b0c0;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .ctaContainer {
+    flex-direction: row;
+  }
+}
+
+/* Neon purple primary button */
+.ctaPrimary {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #8a2be2;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #8a2be2;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.ctaPrimary:hover {
+  background-color: #9d4edd;
+  border-color: #9d4edd;
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+  transform: scale(1.05);
+}
+
+/* Neon cyan secondary button */
+.ctaSecondary {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  color: #00ffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.ctaSecondary:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 255, 255, 0.05);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-0.5rem);
+  }
+}
+
+/* Neon cyan scroll icon */
+.scrollIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #00ffff;
+  stroke: currentColor;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
+}
