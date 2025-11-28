@@ -34,8 +34,10 @@
   opacity: 0;
 }
 
+/* Container centers content and constrains width */
 .container {
   max-width: 56rem;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -43,6 +45,10 @@
   gap: 0.75rem;
   position: relative;
   z-index: 1;
+  align-items: center; /* ensure children are centered horizontally */
+  justify-content: center; /* ensure vertical centering within container */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Neon pink and cyan gradient for logo */
@@ -51,6 +57,17 @@
   font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 0;
+  line-height: 0.9;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+/* Responsive, mobile-friendly sizing using clamp */
+@media (max-width: 639px) {
+  .yoVibeLogo {
+    font-size: clamp(3.2rem, 18vw, 8rem);
+  }
 }
 
 @media (min-width: 640px) {
@@ -71,7 +88,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.4));
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.3));
 }
 
 /* Cyan to purple gradient */
@@ -95,6 +112,7 @@
   gap: 0.1rem;
   margin-top: 0;
   filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5));
+  position: relative;
 }
 
 @keyframes wave {
@@ -110,7 +128,6 @@
 .funnyText::before {
   content: "Tuliwa ?";
   animation: wave 0.9s ease-in-out 0s infinite;
-  
 }
 
 .funnyText::after {
@@ -149,11 +166,12 @@
   color: #9d4edd;
 }
 
+/* Heading uses clamp for better mobile scaling */
 .heading {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-top: 0.5rem;
 }
 
@@ -191,8 +209,11 @@
   font-size: 0.95rem;
   color: #b0b0c0;
   max-width: 42rem;
+  width: 100%;
   margin: 0 auto;
   line-height: 1.6;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 @media (min-width: 640px) {
@@ -207,6 +228,8 @@
   gap: 0.5rem;
   justify-content: center;
   padding-top: 0.5rem;
+  align-items: center; /* ensure buttons are centered on all sizes */
+  width: 100%;
 }
 
 @media (min-width: 640px) {
