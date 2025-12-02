@@ -7,7 +7,7 @@ export default function Features() {
     {
       icon: "📍",
       title: "Real-Time Discovery",
-      description: "Find venues around you instantly. See what's happening, where it's happening.",
+      description: "Find venues and events around you instantly. See what's happening, where it's happening.",
     },
     {
       icon: "🗺️",
@@ -31,7 +31,7 @@ export default function Features() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Powerful Features</h2>
-          <p className={styles.subtitle}>Everything you need to find your next favorite place</p>
+          <p className={styles.subtitle}>Everything you need to find your next vibe plot</p>
         </div>
 
         <div className={styles.grid}>

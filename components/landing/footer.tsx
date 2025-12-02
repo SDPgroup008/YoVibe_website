@@ -35,10 +35,10 @@ export default function Footer() {
             <h4 className={styles.sectionTitle}>Follow Us</h4>
             <div className={styles.socialLinks}>
               <a href="#" className={styles.link}>
-                Twitter
+                
               </a>
               <a href="#" className={styles.link}>
-                Instagram
+                
               </a>
             </div>
           </div>

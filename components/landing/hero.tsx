@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          YoVibe connects you to the venues that matter. Discover venues in real-time, navigate with precision, and
+          YoVibe connects you to the venues and shows you upcoming events. Discover venues in real-time, navigate with precision, and
           experience the energy that makes every moment unforgettable.
         </p>
 
